@@ -22,9 +22,9 @@ public class UnitTest1
     }
 
     [Theory]
-    [InlineData(1.0, 1.0, 2.0)]
-    [InlineData(4.5, 2.5, 7.0)]
-    [InlineData(2.34, 5.78, 8.12)]
+    [InlineData(1.0, 1.0, 0.0)]
+    [InlineData(4.5, 2.5, 2.0)]
+    [InlineData(17.56, 5.78, 11.78)]
     public void TesteDeSubtracao(decimal num1, decimal num2, decimal res)
     {
         CalculadoraImp calc = _calculadora();
@@ -34,8 +34,8 @@ public class UnitTest1
 
     [Theory]
     [InlineData(1.0, 1.0, 2.0)]
-    [InlineData(4.5, 2.5, 7.0)]
-    [InlineData(2.34, 5.78, 8.12)]
+    [InlineData(4.5, 2.5, 11.25)]
+    [InlineData(2.34, 5.78, 13.5252)]
     public void TesteDeMultiplicacao(decimal num1, decimal num2, decimal res)
     {
         CalculadoraImp calc = _calculadora();
@@ -44,9 +44,9 @@ public class UnitTest1
     }
 
     [Theory]
-    [InlineData(1.0, 1.0, 2.0)]
-    [InlineData(4.5, 2.5, 7.0)]
-    [InlineData(2.34, 5.78, 8.12)]
+    [InlineData(1.0, 1.0, 1.0)]
+    [InlineData(4.5, 2.5, 1.8)]
+    [InlineData(15.25, 5.0, 3.05)]
     public void TesteDeDivisao(decimal num1, decimal num2, decimal res)
     {
         CalculadoraImp calc = _calculadora();
