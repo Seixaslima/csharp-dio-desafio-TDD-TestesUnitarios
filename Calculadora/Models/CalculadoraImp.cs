@@ -10,28 +10,43 @@ namespace Calculadora.Models
         private Stack<decimal> _historico;
         public CalculadoraImp()
         {
-            _historico = [];
+            _historico = new Stack<decimal>();
+        }
+
+        private void AddHistorico(decimal valor)
+        {
+            _historico.Push(valor);
         }
 
         public decimal Somar(decimal val1, decimal val2)
         {
-            return 0;
+            var resultado = val1 + val2;
+            AddHistorico(resultado);
+            return resultado;
         }
+
         public decimal Subtrair(decimal val1, decimal val2)
         {
-            return 0;
+            var resultado = val1 - val2;
+            AddHistorico(resultado);
+            return resultado;
         }
         public decimal Multiplicar(decimal val1, decimal val2)
         {
-            return 0;
+            var resultado = val1 * val2;
+            AddHistorico(resultado);
+            return resultado;
         }
         public decimal Dividir(decimal val1, decimal val2)
         {
-            return 0;
+            var resultado = val1 / val2;
+            AddHistorico(resultado);
+            return resultado;
         }
         public decimal UltimoResultado()
         {
-            return 0;
+
+            return _historico.Pop();
         }
 
 
