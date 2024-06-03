@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace Calculadora.Models
 {
-    public class Calculadora
+    public class CalculadoraImp
     {
         private Stack<decimal> _historico;
-        public Calculadora()
+        public CalculadoraImp()
         {
             _historico = [];
         }
